@@ -11,6 +11,7 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
 <script src="js/Jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/all.min.css">
+
 <style>
   .form-inputs{
     position:relative;
@@ -36,27 +37,30 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
 <body>
 <div class="container-fluid  bg-secondary">
   <div class="row">
+    <div class="col-md-2"></div>
 
-    <div class="col-md-8">
-        <div class="d-flex form-inputs">
-        <input class="form-control" type="text" placeholder="Search any product...">
-        <i class="bx bx-search"></i>
-        </div>
-           </div>
-    <div class="col-md-5 mt-3 ">
-    <h3 class="text-center"><a href="login.php" class="alert-link" style="color:black;text-decoration:none;">Login |</a>
-    <a href="SignUp.php" class="alert-link" style="color:black;text-decoration:none;">Register</a>
-    </h1>
-  </h1>
-    </div>
+    <div class="col-md-8 mt-3 text-end">
+    <form class="d-flex" role="search">
+   
+     <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Enter the product name...."  aria-describedby="button-addon2">
+  <button class="btn btn-primary" type="submit" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+</div>
+      </form>
+     </div>
 
-    <div class="col-md-5 mt-3 ">
-    <h3 class="text-center">
-    <a href="cart.php" class="alert-link" style="color:black;text-decoration:none;">Cart</a></h1>
-  </h1>
-  
-    </div>
+     
+    <div class="col-md-2 text-end gap-3 mt-3">
+    <a href="login.php">
+    <span id="cartIcon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Login">
+      <i class="fas fa-sign-in" style="font-size:30px;color:#000"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="cart.php">
+   <span id="cartIcon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Cart">
+    <i class="fa-solid fa-cart-shopping"style="font-size:30px;color:#000"></i></a>
+   
 
+     </div>
+ 
  
   
  

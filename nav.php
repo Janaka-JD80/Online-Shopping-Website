@@ -10,6 +10,7 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
 <script src="js/bootstrap.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
 
@@ -32,11 +33,9 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
           <a class="nav-link" href="about.php">About Us</a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+    
     </div>
+  
   </div>
 </nav>
     

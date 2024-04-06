@@ -1,9 +1,9 @@
 <?php 
 include "main.php";
 include "nav.php";
+include "connection.php";
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -111,11 +111,49 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
 			$Pasword=$encryption;
 
 
-        include "connection.php";
+
         $sql_insert="Insert into user values('$FullName','$Address','$Telephone','$Email','$UserName','$Pasword','User')";
         if($result=mysqli_query($con,$sql_insert)){
         echo "<script>alert('Data inserted successfully');</script>";
 
+		require 'vendor/autoload.php';
+
+
+		// Your existing code...
+		
+		// Instantiate Vonage Client with Basic credentials
+		$basic = new \Vonage\Client\Credentials\Basic("86ea397b", "I0s5PCX7BRKI971D");
+		$client = new \Vonage\Client($basic);
+		
+		// GuzzleHttp client configuration to ignore SSL verification
+		$guzzleClient = new \GuzzleHttp\Client([
+			'verify' => false, // Disable SSL verification
+		]);
+		
+		$client->setHttpClient($guzzleClient); // Set the GuzzleHttp client for Vonage client
+		
+		// Send SMS using Vonage API
+		try {
+			$response = $client->sms()->send(
+				new \Vonage\SMS\Message\SMS("94711387738", "Mtech", 'A text message sent using the Nexmo SMS API')
+			);
+			
+			$message = $response->current();
+			
+			if ($message->getStatus() == 0) {
+				echo "The message was sent successfully\n";
+			} else {
+				echo "The message failed with status: " . $message->getStatus() . "\n";
+			}
+		} catch (\GuzzleHttp\Exception\RequestException $e) {
+			// Handle exceptions
+			echo "Error: " . $e->getMessage();
+		}
+		
+		
+		
+		
+		
 
          } else{
             echo "Sorry, Data not added".mysqli_error($con);   

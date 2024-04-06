@@ -136,4 +136,8 @@ while($data=mysqli_fetch_array($result)){
 </body>
 </html>
 
+<?php
+include "footer.php";
+?>
+
     
