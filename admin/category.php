@@ -32,6 +32,172 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
         }
       }
 
+      body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.card0 {
+    box-shadow: 0px 4px 8px 0px #757575;
+    border-radius: 0px;
+}
+
+.card2 {
+    margin: 0px 40px;
+}
+
+.logo {
+    width: 200px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+.image {
+    width: 360px;
+    height: 280px;
+}
+
+.border-line {
+    border-right: 1px solid #EEEEEE;
+}
+
+.facebook {
+    background-color: #3b5998;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.twitter {
+    background-color: #1DA1F2;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.linkedin {
+    background-color: #2867B2;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.line {
+    height: 1px;
+    width: 45%;
+    background-color: #E0E0E0;
+    margin-top: 10px;
+}
+
+.or {
+    width: 10%;
+    font-weight: bold;
+}
+
+.text-sm {
+    font-size: 14px !important;
+}
+
+::placeholder {
+    color: #BDBDBD;
+    opacity: 1;
+    font-weight: 300
+}
+
+:-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+::-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+input, textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+input:focus, textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #304FFE;
+    outline-width: 0;
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+}
+
+.btn-blue {
+    background-color: #1A237E;
+    width: 150px;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.btn-blue:hover {
+    background-color:#1A237E;
+    cursor: pointer;
+}
+
+.bg-blue {
+    color: #fff;
+    background-color: #1A237E;
+}
+
+@media screen and (max-width: 991px) {
+    .logo {
+        margin-left: 0px;
+    }
+
+    .image {
+        width: 300px;
+        height: 220px;
+    }
+
+    .border-line {
+        border-right: none;
+    }
+
+    .card2 {
+        border-top: 1px solid #EEEEEE !important;
+        margin: 0px 15px;
+    }
+}
     </style>
 
     
@@ -126,137 +292,62 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
 	<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
 
-<h1 class="text-center mt-3">Add Products</h1>
+    <h1 class="text-center">Add Category</h1>
 
 <div class="container mb-5 mt-5" style="background-color: #BAE8E8;padding: 35px;">
 <b>
-<form method="post" action=""  enctype="multipart/form-data">
+<form method="post" action="" >
 <fieldset>
 
-	<div class="form-row">
 
-	<div class="form-group  col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
-	<label for="">Item Code:</label>
-	<input type="text" class="form-control" name="Icode" id="Icode">
-	</div>
-
-	<div class="form-group  col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
-	<label for="">Item Name:</label>
-	<input type="text" class="form-control" name="Iname"  id="Iname">
-	</div>
-
-    
-	<div class="form-group  col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
-  	<label for="">Description:</label>
-  	<textarea class="form-control" rows="5" name="Idescription"></textarea>
-	</div>
-
-	<div class="form-group   col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
-	<label for="">Stock:</label>
-	<input type="number" class="form-control" name="Istock" id="Istock">
-	</div>         
-
-	<div class="form-group   col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
-	<label for="">Price:</label>
-	<input type="number" class="form-control" name="Iprice" id="Iprice">
-	</div>
-
-    <div class="form-group   col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
-	<label for="">Category:</label>
-    <select class="form-select" name="Icategory">
-	<?php
-	$sql_select="select Category_name from category";
-	$result=mysqli_query($con,$sql_select);
-	while($data=mysqli_fetch_array($result)){
-	echo "<option>".$data['Category_name']."</option>";
-	}
-	?>	  
-  </select>
-	</div>
-
-	<div class="form-group   col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
-	<label for="">Brand:</label>
-
-  <select class="form-select" name="Ibrand">
-  <?php
-	$sql_select="select brand_name from brand";
-	$result=mysqli_query($con,$sql_select);
-	while($data=mysqli_fetch_array($result)){
-	echo "<option>".$data['brand_name']."</option>";
-	}
-	?>	  
-  </select>
+	<div class="form-group col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
+	<label for="">Category Name:</label>
+	<input type="text" class="form-control" name="CatName" id="CatName">
 
 	</div>
 
-
-
-    <div class="form-group   col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
-	<label for="">Image:</label>
-	<input type="file" class="form-control" name="Iimage" id="Iimage">
+	<div class="form-group col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
+	<label for="">Category No:</label>
+	<input type="text" class="form-control" name="CatNo" id="CatNo">
+	<span class id="upassword"></span>
 	</div>
-
+  <br>
+	<div class="form-group col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
+    <input type="submit"  class="btn btn-primary" name="sub" value="Submit" />
+	</div>	
 
 	</div>
 	</fieldset>
-	<br>
-  <div class="form-group   col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
-  <input type="submit"  class="btn btn-primary" name="sub" value="Add" />
-  </div>
 
+ 
 
 	</form>
 	
 	</b>
 	</div>
-
-  </div>
-  
-</div>
-
-
 	
-	
-
-
+	</body>
+</html>
 
 <?php
     if(isset($_POST['sub'])){
-        $Icode=$_POST['Icode'];
-        $Iname=$_POST['Iname'];
-        $Idescription=$_POST['Idescription'];
-        $Istock=$_POST['Istock'];
-        $Icategory=$_POST['Icategory'];
-        $Iprice=$_POST['Iprice'];
-		$Ibrand=$_POST['Ibrand'];
-		$Iimage=addslashes(file_get_contents($_FILES['Iimage']['tmp_name']));
+ 
+       
+        $catname=$_POST['CatName'];
+        $catno=$_POST['CatNo'];
+		
 
-  /* 
-        echo $Icode;
-        echo $Iname;
-        echo $Idescription;
-        echo $Istock;
-        echo $Iprice;
-        echo $Icategory;
-		echo $Ibrand;
-
- */
-
-
-        $sql_insert="Insert into product values('$Icode','$Iname','$Idescription','$Istock','$Iprice','$Icategory','$Ibrand','$Iimage')";
+        $sql_insert="Insert into category values(' $catname', $catno)";
         if($result=mysqli_query($con,$sql_insert)){
         echo "<script>alert('Data inserted successfully');</script>";
 
-
          } else{
-            echo "Sorry, Data not added".mysqli_error($con);   
+         echo "Sorry, Data not added".mysqli_error($con);   
     }
 	mysqli_close($con);    
-
-	
-       
-	}
-
+    }
+    
+   
 ?>
 
 

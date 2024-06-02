@@ -52,17 +52,12 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href="index.php">
               <span data-feather="home"></span>
               Dashboard
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file"></span>
-              Orders
-            </a>
-          </li>
+      
           <li class="nav-item">
             <a class="nav-link" href="product.php">
               <span data-feather="shopping-cart"></span>
@@ -70,15 +65,15 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="brand.php">
               <span data-feather="users"></span>
-              Customers
+              Brand
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="category.php">
               <span data-feather="bar-chart-2"></span>
-              Report
+              Category
             </a>
           </li>
           <li class="nav-item">

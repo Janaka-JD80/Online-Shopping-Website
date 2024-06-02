@@ -197,7 +197,7 @@ while($data=mysqli_fetch_assoc($result)){
 							<a href="index.php"> <img src="img/shop.png" alt="" style="height:80px;" /></a>
 						</div>
 						<div class="col-md-6">
-							<a href="payment.php"> <img src="img/check.png" alt="" style="height:100px;" /></a>
+							<a href="?checkout"> <img src="img/check.png" alt="" style="height:100px;" /></a>
 						</div>
 				
 </div>
@@ -243,6 +243,46 @@ while($data=mysqli_fetch_assoc($result)){
     }
 
  }
+
+ if(isset($_GET['checkout'])){
+
+  $sql_select = "SELECT * FROM cart WHERE UserName = '$username'";
+  $result = $con->query($sql_select);
+  
+  if ($result->num_rows > 0) {
+
+      while($row = $result->fetch_assoc()) {
+   
+          $orderid = $username."123"; 
+          $itemId = $row['Icode'];
+          $qty = $row['Quantity'];
+          $amount = $row['Amount'];
+          $chk_date = date('Y-m-d');
+          $customer = $row['UserName'];
+          
+          $sql_insert = "INSERT INTO `check` (orderid, itemId, Qty, Amount, chk_date, Customer) 
+                         VALUES ('$orderid', '$itemId', '$qty', '$amount', '$chk_date', '$customer')";
+          
+          if ($con->query($sql_insert) === TRUE) {
+
+           $sql_delete = "DELETE FROM cart WHERE UserName = '$username'";
+            if ($con->query($sql_delete) === TRUE) {
+              echo "<script>window.location.href ='cart.php';</script>";
+              echo "<script>alert(Your Order placement is successful'')</script>";
+       
+            } 
+         
+
+          } 
+      }
+  } 
+  
+
+   
+
+
+}
+
 
 
 ?>

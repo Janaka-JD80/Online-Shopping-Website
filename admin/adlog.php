@@ -36,7 +36,6 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
     color: #000;
     overflow-x: hidden;
     height: 100%;
-    background-color: #B0BEC5;
     background-repeat: no-repeat;
 }
 
@@ -220,21 +219,16 @@ a {
 
 <div class="container-fluid">
   <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+  <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href="index.php">
               <span data-feather="home"></span>
               Dashboard
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file"></span>
-              Orders
-            </a>
-          </li>
+      
           <li class="nav-item">
             <a class="nav-link" href="product.php">
               <span data-feather="shopping-cart"></span>
@@ -242,21 +236,21 @@ a {
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="brand.php">
               <span data-feather="users"></span>
-              Customers
+              Brand
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="category.php">
               <span data-feather="bar-chart-2"></span>
-              Reports
+              Category
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="adlog.php">
               <span data-feather="layers"></span>
-              Integrations
+              User Account
             </a>
           </li>
         </ul>
@@ -300,39 +294,44 @@ a {
 
     <h1 class="text-center">Admin Registartion</h1>
 
-<div class="container mb-5 mt-5">
+<div class="container mb-5 mt-5" style="background-color: #BAE8E8;padding: 35px;" >
 <b>
 <form method="post" action="" >
 <fieldset>
 
-	<div class="form-group  col-md-6">
+	<div class="form-group  col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
 	<label for="">E-Mail:</label>
 	<input type="email" class="form-control" name="Email" id="Email">
 	<span id="uemail"></span>
 	</div>
 
-	<div class="form-group  col-md-6">
+	<div class="form-group  col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
 	<label for="">User Name:</label>
 	<input type="text" class="form-control" name="UserName" id="UserName">
 	<span id="uusername"></span>
 	</div>
 
-	<div class="form-group col-md-6">
+	<div class="form-group col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
 	<label for="">Password:</label>
 	<input type="password" class="form-control" name="Password" id="Password">
 	<span class id="upassword"></span>
 	</div>
 
-	<div class="form-group col-md-6">
+	<div class="form-group col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
 	<label for="">Confirm Password:</label>
 	<input type="password" class="form-control"name="RePassword" id="RePassword">
 	<span id="upassword"></span>
 	</div>	
+    <br>
+    <div class="form-group col-md-6 col-sm-6 col-12 mx-auto d-grid gap-2 ">
+    <input type="submit"  class="btn btn-primary" name="sub" value="Submit" />
+	<input type="reset" class="btn btn-primary " name="res" value="Reset" />
+	</div>	
 	</div>
 	</fieldset>
 	<br>
-	<input type="submit"  class="btn btn-primary" name="sub" value="Submit" />
-	<input type="reset" class="btn btn-primary " name="res" value="Reset" />
+ 
+
 	</form>
 	
 	</b>
