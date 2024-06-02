@@ -262,6 +262,7 @@ $result=mysqli_query($con,$sql_select);
 $data=mysqli_fetch_assoc($result);
 $dUname=$data['UserName'];
 $dPassword=$data['Password'];
+$type=$data['UserType'];
 
 $encryption=$dPassword;			
 $ciphering = "AES-128-CTR";
@@ -272,13 +273,20 @@ $decryption=openssl_decrypt ($encryption, $ciphering,
 $decryption_key, $options, $decryption_iv);
 $dPassword=$decryption;
 
-if($password==$dPassword && $username==$dUname){
+if($password==$dPassword && $username==$dUname && $type=="User"){
 	$_SESSION["Uname"]=$dUname;
 	$_SESSION["Upassword"]=$dPassword;
 	echo "<script>window.location.href ='Home.php'</script>";
 	
+}
 
-}else{
+elseif($password==$dPassword && $username==$dUname && $type=="Admin"){
+    $_SESSION["Uname"]=$dUname;
+	$_SESSION["Upassword"]=$dPassword;
+	echo "<script>window.location.href ='Admin/index.php'</script>";
+}
+
+else{
 	echo "<p style='color:red;'>Incorect username or password!</p>";
 }
 }else{

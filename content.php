@@ -14,6 +14,7 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
 <div class="container-fluid">
     <div class="row">
 
+
         <div class="col-md-3 text-center" style="background-color:lightgray;">
         <h2 class="mt-3">Category</h2><br>
         <?php
@@ -25,7 +26,6 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
         }
  
 
-  
         ?>
 
         </div>

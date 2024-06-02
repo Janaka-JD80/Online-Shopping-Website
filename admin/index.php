@@ -78,13 +78,13 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="bar-chart-2"></span>
-              Reports
+              Report
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="adlog.php">
               <span data-feather="layers"></span>
-              Integrations
+              User Account
             </a>
           </li>
         </ul>
