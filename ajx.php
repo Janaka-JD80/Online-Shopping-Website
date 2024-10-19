@@ -141,8 +141,8 @@ if($quantity>$Nstock+$Cqty){
    
   }
 
-header('Content-Type: application/json');
-echo json_encode($response);
+    header('Content-Type: application/json');
+    echo json_encode($response);
   }
 
   

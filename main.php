@@ -40,13 +40,15 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
     <div class="col-md-2"></div>
 
     <div class="col-md-8 mt-3 text-end">
-    <form class="d-flex" role="search">
-   
-     <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Enter the product name...."  aria-describedby="button-addon2">
-  <button class="btn btn-primary" type="submit" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
-</div>
-      </form>
+    <form class="d-flex" role="search" action="home.php" method="GET">
+  <div class="input-group mb-3">
+    <input type="text" name="search" class="form-control" placeholder="Enter the product name...." aria-describedby="button-addon2">
+    <button class="btn btn-primary" type="submit" id="button-addon2">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </div>
+</form>
+
      </div>
 
      

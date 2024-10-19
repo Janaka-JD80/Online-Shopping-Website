@@ -2,7 +2,6 @@
 include "main.php";
 include "nav.php";
 include "connection.php";
-
 ?>
 
 <!DOCTYPE html>
@@ -90,14 +89,6 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
         $Pasword=$_POST['Password'];
 		$rePasword=$_POST['RePassword'];
 
-/* 
-        echo $FullName;
-        echo $Address;
-        echo $Telephone;
-        echo $Email;
-        echo $UserName;
-        echo $Pasword;
-  */ 
 
   if($Pasword==$rePasword){
 	$simple_string = $Pasword;  
